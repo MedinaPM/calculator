@@ -1,11 +1,12 @@
 # The Odin Project: Foundations Course
 ## Project: Calculator
-===========================================================================================
+===========================================================================
 
 > Before you get started with this calculator project, we need to cover a word of warning. As you look into how to evaluate complex mathematical statements in JavaScript, you will likely come across the tantalizing eval() function. However, this function can be very dangerous and should not ever be used! You’ll need to build your own functions to evaluate expressions as part of this calculator project. On the same note, when researching how to calculate expressions for this project, you may encounter solutions that suggest that you return a *new Function()* that evaluates a string. Similarly to *eval()*, this should not be used due to potential pitfalls of evaluating insecure data. Besides, where’s the fun in solutions that do all the work for you? Let’s get to it!
 
 ## Assignment
--------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
 Don’t forget to commit early & often! You can reference the Commit Message lesson here!
 
 Here are some use cases (abilities your project needs to have):
@@ -38,7 +39,7 @@ Here are some use cases (abilities your project needs to have):
   * Display a snarky error message if the user tries to divide by 0… and don’t let it crash your calculator!
 
 ### Extra Credit
--------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
   + Users can get floating point numbers if they do the math required to get one, but they can’t type them in yet. Add a . button and let users input decimals! Make sure you don’t let them type more than one though: *12.3.56.5*. It is hard to do math on these numbers. (disable the decimal button if there’s already one in the display)
   + Make it look nice! This is a great project to practice your CSS skills. At least make the operations a different color from the keypad buttons.
   + Add a “backspace” button, so the user can undo if they click the wrong number.
