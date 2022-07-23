@@ -1,0 +1,55 @@
+:root {
+  --height: 80px;
+  --border: 4px;
+  --color: rgb(47, 168, 47);
+}
+
+* {
+  font-family: monospace;
+}
+
+.container {
+  width: fit-content;
+  background-color: rgb(129, 129, 129);
+  padding: var(--border);
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-radius: 5px;
+}
+
+.display {
+  height: 150px;
+  background-color: rgb(236, 231, 231);
+  font-size: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+  padding-right: var(--border);
+  border-radius: 5px;
+  margin: var(--border);
+}
+
+button {
+  height: var(--height);
+  width: var(--height);
+  margin: var(--border);
+  font-size: 30px;
+  border-style: hidden;
+  border-radius: 50%;
+  background-color: rgb(236, 231, 231);
+}
+
+.specialB {
+  color: var(--color);
+  font-size: 40px;
+}
+
+#clearAll {
+  color: rgb(228, 20, 20);
+}
+
+#equal {
+  color: white;
+  background-color: var(--color);
+}
