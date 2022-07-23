@@ -9,6 +9,12 @@
 }
 
 .container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.calculator {
   width: fit-content;
   background-color: rgb(129, 129, 129);
   padding: var(--border);
@@ -68,4 +74,8 @@ button:active {
 
 #equal:active {
   background-color: rgb(34, 134, 34);
+}
+
+#per {
+  font-size: 30px;
 }
