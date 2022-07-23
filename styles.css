@@ -40,6 +40,14 @@ button {
   background-color: rgb(236, 231, 231);
 }
 
+button:hover {
+  background-color: rgb(212, 208, 208);
+}
+
+button:active {
+  background-color: rgb(189, 185, 185);
+}
+
 .specialB {
   color: var(--color);
   font-size: 40px;
@@ -52,4 +60,12 @@ button {
 #equal {
   color: white;
   background-color: var(--color);
+}
+
+#equal:hover {
+  background-color: rgb(42, 151, 42);
+}
+
+#equal:active {
+  background-color: rgb(34, 134, 34);
 }
