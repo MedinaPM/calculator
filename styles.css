@@ -5,7 +5,7 @@
 }
 
 * {
-  font-family: monospace;
+  font-family: monospace, sans-serif;
 }
 
 .container {
@@ -34,6 +34,10 @@
   padding-right: var(--border);
   border-radius: 5px;
   margin: var(--border);
+}
+
+.row {
+  display: flex;
 }
 
 button {
@@ -78,4 +82,13 @@ button:active {
 
 #per {
   font-size: 30px;
+}
+
+#b0 {
+  width: 168px;
+  border-radius: 40px;
+}
+
+#sign {
+  color: var(--color);
 }
