@@ -131,10 +131,15 @@ function operate() {
       firstNum = mul;
       break;
     case '÷':
-      let div = Number(firstNum) / Number(secondNum);
-      display(div);
-      firstNum = div;
-      break;
+      if (secondNum == 0) {
+        document.getElementById("display").innerHTML = 'Error: div 0';
+        break
+      } else {
+        let div = Number(firstNum) / Number(secondNum);
+        display(div);
+        firstNum = div;
+        break;
+      }
   }
   secondNum = '';
 }
