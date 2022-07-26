@@ -44,9 +44,13 @@ function keyReading(key) {
       operator = key;
       break;
     case '=':
-      operate();
-      clear();
-      break;
+      if (secondNum == '') {
+        document.getElementById("display").innerHTML = 'Missing Num';
+        break;
+      } else {
+        operate();
+        break;
+      }
     case 'c':
       display(0);
       clear();
