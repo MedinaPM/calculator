@@ -4,16 +4,26 @@ let secondNum = '';
 let operator = '';
 let reDot = /[.]/g;
 
+// capturing keyboard input
+document.addEventListener("keydown", function(e) {
+  let key = e.key;
+  console.log(`key pressed: ${key}`);
+  keyReading(key);
+  console.log(`first num: ${firstNum}`);
+  console.log(`sec num: ${secondNum}`);
+  console.log(`operator: ${operator}`);
+})
+
 // capturing each button when clicked
 let buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => button.addEventListener("click", function(e) {
   let key = this.innerHTML; // a string representing the key
-    console.log(`key pressed: ${key}`);
-    keyReading(key);
-    console.log(`first num: ${firstNum}`);
-    console.log(`sec num: ${secondNum}`);
-    console.log(`operator: ${operator}`);
+  console.log(`key pressed: ${key}`);
+  keyReading(key);
+  console.log(`first num: ${firstNum}`);
+  console.log(`sec num: ${secondNum}`);
+  console.log(`operator: ${operator}`);
 }));
 
 // processing de key input for each press
@@ -36,14 +46,18 @@ function keyReading(key) {
       break;
     case '+':
     case '−':
+    case '-':
     case '×':
+    case '*':
     case '÷':
+    case '/':
       if (secondNum !== '') {
         operate();
       }
       operator = key;
       break;
     case '=':
+    case 'Enter':
       if (secondNum == '') {
         document.getElementById("display").innerHTML = 'Missing Num';
         break;
@@ -52,16 +66,19 @@ function keyReading(key) {
         break;
       }
     case 'c':
+    case 'Escape':
       display(0);
       clear();
       break;
     case '+/−':
+    case '`':
       signChange();
       break;
     case '%':
       percent();
       break;
     case '↩':
+    case 'Backspace':
       back();
       break;
     }
