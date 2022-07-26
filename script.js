@@ -38,8 +38,10 @@ function keyReading(key) {
     case '−':
     case '×':
     case '÷':
+      if (secondNum !== '') {
+        operate();
+      }
       operator = key;
-      display(key);
       break;
     case '=':
       operate();
@@ -112,20 +114,25 @@ function operate() {
     case '+':
       let add = Number(firstNum) + Number(secondNum);
       display(add);
+      firstNum = add;
       break;
     case '−':
       let sub = Number(firstNum) - Number(secondNum);
       display(sub);
+      firstNum = sub;
       break;
     case '×':
       let mul = Number(firstNum) * Number(secondNum);
       display(mul);
+      firstNum = mul;
       break;
     case '÷':
       let div = Number(firstNum) / Number(secondNum);
       display(div);
+      firstNum = div;
       break;
   }
+  secondNum = '';
 }
 
 // display any output on the calculator screen
