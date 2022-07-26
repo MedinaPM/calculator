@@ -137,5 +137,13 @@ function operate() {
 
 // display any output on the calculator screen
 function display(display) {
-  document.getElementById("display").innerHTML = display;
+  let str = display.toString();
+  let strLength = str.length;
+
+  if (strLength >= 11) {
+    let round = Number(display).toPrecision(10);
+    document.getElementById("display").innerHTML = round;
+  } else {
+    document.getElementById("display").innerHTML = display;
+  }
 }
