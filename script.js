@@ -61,6 +61,9 @@ function keyReading(key) {
     case '%':
       percent();
       break;
+    case '↩':
+      back();
+      break;
     }
 }
 
@@ -111,6 +114,16 @@ function clear() {
   firstNum = '';
   secondNum = '';
   operator = '';
+}
+
+function back() {
+  if (operator == '') {
+    firstNum = firstNum.substring(0, firstNum.length - 1);
+    display(firstNum);
+  } else {
+    secondNum = secondNum.substring(0, secondNum.length - 1);
+    display(secondNum);
+  }
 }
 
 function operate() {
