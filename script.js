@@ -43,6 +43,7 @@ function keyReading(key) {
     case '8':
     case '9':
       numAssign(key);
+      document.getElementById("clearAll").innerHTML = 'C';
       break;
     case '+':
     case '−':
@@ -65,10 +66,14 @@ function keyReading(key) {
         operate();
         break;
       }
-    case 'c':
+    case 'AC':
     case 'Escape':
       display(0);
+      clearAll();
+      break;
+    case 'C':
       clear();
+      document.getElementById("clearAll").innerHTML = 'AC';
       break;
     case '+/−':
     case '`':
@@ -127,10 +132,20 @@ function percent() {
   }
 }
 
-function clear() {
+function clearAll() {
   firstNum = '';
   secondNum = '';
   operator = '';
+}
+
+function clear() {
+  if (operator == '') {
+    firstNum = '';
+    display(firstNum);
+  } else {
+    secondNum = '';
+    display(secondNum);
+  }
 }
 
 function back() {
