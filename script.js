@@ -194,8 +194,8 @@ function display(display) {
   let str = display.toString();
   let strLength = str.length;
 
-  if (strLength >= 11) {
-    let round = Number(display).toPrecision(10);
+  if (strLength >= 7) {
+    let round = Number(display).toPrecision(6);
     document.getElementById("display").innerHTML = round;
   } else {
     document.getElementById("display").innerHTML = display;

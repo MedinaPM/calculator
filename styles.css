@@ -1,11 +1,10 @@
 :root {
   --height: 80px;
-  --border: 4px;
-  --color: rgb(47, 168, 47);
+  --border: 5px;
 }
 
 * {
-  font-family: monospace, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .container {
@@ -16,7 +15,7 @@
 
 .calculator {
   width: fit-content;
-  background-color: rgb(129, 129, 129);
+  background-color: rgb(0, 0, 0);
   padding: var(--border);
   display: flex;
   flex-direction: column;
@@ -26,8 +25,10 @@
 
 .display {
   height: 150px;
-  background-color: rgb(236, 231, 231);
-  font-size: 50px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  font-weight: 100;
   display: flex;
   flex-direction: row-reverse;
   align-content: center;
@@ -52,7 +53,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(212, 208, 208);
+  background-color: rgb(115, 115, 115);
 }
 
 button:active {
@@ -60,16 +61,39 @@ button:active {
 }
 
 .specialB {
-  color: var(--color);
+  background-color: rgb(165, 165, 165);
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+}
+
+.specialB:hover {
+  background-color: rgb(217, 217, 217);
+}
+
+.specialB:active {
+  background-color: rgb(237, 237, 237);
+}
+
+.operator {
+  background-color: rgb(255, 159, 10);
   font-size: 40px;
 }
 
-#clearAll {
-  color: rgb(228, 20, 20);
-  font-size: 28px;
+.operator:hover {
+  background-color: rgb(251, 199, 141);
 }
 
-#equal {
+.operator:active {
+  color: rgb(255, 159, 10);
+  background-color: rgb(255, 255, 255);
+}
+
+/* #clearAll {
+  color: rgb(228, 20, 20);
+  font-size: 28px;
+} */
+
+/* #equal {
   color: white;
   background-color: var(--color);
 }
@@ -80,22 +104,25 @@ button:active {
 
 #equal:active {
   background-color: rgb(34, 134, 34);
-}
-
-.per {
-  font-size: 30px;
-}
-
-/* large 0 button */
-/* #b0 {
-  width: 168px;
-  border-radius: 40px;
 } */
 
-.sign {
-  color: var(--color);
+/* .per {
+  font-size: 30px;
+} */
+
+/* large 0 button */
+#b0 {
+  width: 168px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
 }
 
-#back {
+/* .sign {
+  color: var(--color);
+} */
+
+/* #back {
   font-size: 36px;
-}
+} */
