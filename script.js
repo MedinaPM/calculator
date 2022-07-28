@@ -166,16 +166,19 @@ function operate() {
       firstNum = add;
       break;
     case '−':
+    case '-':
       let sub = Number(firstNum) - Number(secondNum);
       display(sub);
       firstNum = sub;
       break;
     case '×':
+    case '*':
       let mul = Number(firstNum) * Number(secondNum);
       display(mul);
       firstNum = mul;
       break;
     case '÷':
+    case '/':
       if (secondNum == 0) {
         document.getElementById("display").innerHTML = 'Error: div 0';
         break
